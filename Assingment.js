@@ -4,7 +4,7 @@ Pair Programming Lab: Strings & Numbers Boot Camp (NO FUNCTIONS YET)
 Names: Jacob  Alan
 
 Instructions:
-- Complete each TODO (no functions in this lab).
+- Complete each
 - Run often and compare your output to the “EXPECTED OUTPUT” comments.
 - Keep your code readable: small steps, good variable names.
 
@@ -64,8 +64,6 @@ console.log("\n=== PART B: Clean + Search ===\n");
 // Example: "   NiCK Armstrong   "
 let messyUsername = `  aHHHHHHHHHHHHHHHHah jfohe gf u  ; kdjoeifhbvbn `;
 
-// TODO B2: Create cleanUsername by trimming spaces and lowercasing.
-// Hint: messyUsername.trim().toLowerCase()
 let cleanUsername = messyUsername.trim().toLowerCase();
 
 cleanUsername = cleanUsername.replaceAll(" ", "_");
@@ -106,12 +104,9 @@ let quantityIsEven = (quantity % 2) === 0;
 
 console.log(quantityIsEven);
 
-// TODO C7: Create rand1to10 = random integer 1..10 inclusive
-// Hint: Math.floor(Math.random() * 10) + 1
-let rand1to10 = 0; // TODO
+let rand1to10 = Math.floor(Math.random() * 10) + 1;
 
-// TODO C8: Print: Random 1-10: <rand1to10>
-console.log(""); // TODO
+console.log(rand1to10);
 
 /*
 EXPECTED OUTPUT (random will differ):
@@ -129,37 +124,26 @@ Random 1-10: <some number 1..10>
 
 console.log("\n=== PART D: Conversions + NaN ===\n");
 
-// TODO D1: Create three “input” strings:
-let inputA = ""; // TODO example: "12"
-let inputB = ""; // TODO example: "3.5"
-let inputC = ""; // TODO example: "nope"
+let inputA = "12";
+let inputB = "3.5";
+let inputC = "nope";
 
-// TODO D2: Convert inputA and inputB into numbers using Number()
-let numA = 0; // TODO
-let numB = 0; // TODO
+let numA = Number(inputA);
+let numB = Number(inputB);
 
-// TODO D3: Print: A + B = <sum>
-console.log(""); // TODO
+console.log(`SUM: ${numA + numB}`);
 
-// TODO D4: Convert inputC into a number (it might become NaN)
-let numC = 0; // TODO
+let numC = Number(inputC);
 
-// TODO D5: Print: C as number: <numC>
-console.log(""); // TODO
+console.log(inputC);
 
-// TODO D6: Create cIsNaN using Number.isNaN(numC)
-let cIsNaN = false; // TODO
+let cIsNaN = Number.isNaN(numC);
 
-// TODO D7: Print: C is NaN: <true/false>
-console.log(""); // TODO
+console.log(cIsNaN);
 
-// TODO D8: Create safeC
-// If cIsNaN is true, safeC should be 0. Otherwise safeC should be numC.
-// Hint: use the ternary operator: condition ? valueIfTrue : valueIfFalse
-let safeC = 0; // TODO
+let safeC = cIsNaN ? 0 : numC
 
-// TODO D9: Print: safeC: <safeC>
-console.log(""); // TODO
+console.log(safeC);
 
 /*
 EXPECTED OUTPUT (if inputA="12", inputB="3.5", inputC="nope"):
@@ -175,62 +159,23 @@ safeC: 0
 
 console.log("\n=== PART E: Mini Receipt ===\n");
 
-// TODO E1: Create item1Name (string) and item1Price (number)
-let item1Name = ""; // TODO
-let item1Price = 0; // TODO
+let item1Name = "item";
+let item1Price = 5.00;
 
-// TODO E2: Create item2Name (string) and item2Price (number)
-let item2Name = ""; // TODO
-let item2Price = 0; // TODO
+let item2Name = "item2";
+let item2Price = 10.00;
 
-// TODO E3: Create taxRate (number). Example: 0.07
-let taxRate = 0; // TODO
+let taxRate = 0.07;
 
-// TODO E4: Compute subtotal (add the two prices)
-let subtotal = 0; // TODO
+let subtotal = item1Price + item2Price;
 
-// TODO E5: Compute taxAmount = subtotal * taxRate
-let taxAmount = 0; // TODO
+let taxAmount = subtotal * taxRate;
 
-// TODO E6: Compute total = subtotal + taxAmount
-let total = 0; // TODO
+let total = subtotal + taxAmount;
 
-// TODO E7: Print the receipt exactly in this format:
-//
-// Receipt
-// Item: Soda  | Price: $1.50
-// Item: Chips | Price: $2.00
-// Subtotal: $3.50
-// Tax:      $0.25
-// Total:    $3.75
-//
-// Tips:
-// - Use toFixed(2) on numbers for 2 decimals (money)
-// - Use template literals: `text ${variable} more text`
-//
-// TODO E7a: Print "Receipt"
-console.log(""); // TODO
 
-// TODO E7b: Print item 1 line (use item1Name and item1Price.toFixed(2))
-console.log(""); // TODO
-
-// TODO E7c: Print item 2 line
-console.log(""); // TODO
-
-// TODO E7d: Print subtotal line
-console.log(""); // TODO
-
-// TODO E7e: Print tax line
-console.log(""); // TODO
-
-// TODO E7f: Print total line
-console.log(""); // TODO
-
-// ============================================================
-// 37–40 min: CLEAN UP + REFLECTION (comments)
-// ============================================================
-//
-// TODO REFLECTION 1: One string method you used today: ____________________________
-// TODO REFLECTION 2: One number concept you used today (%, rounding, conversion, etc.): ____________________________
-//
-// TODO SUBMISSION: Add both names at the top, push to GitHub, submit on Canvas.
+console.log(`Item: ${item1Name} | Price: $${item1Price}`);
+console.log(`Item: ${item2Name} | Price: $${item2Price}`);
+console.log(`Subtotal: $${subtotal}`);
+console.log(`Tax: $${taxAmount}`);
+console.log(`Total: $${total}`);
