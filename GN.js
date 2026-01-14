@@ -63,9 +63,8 @@ console.log("concat:", full1);
 let full2 = `${firstName} ${lastName}`;
 console.log("template:", full2);
 
-// TODO: Make a new variable called favoriteFood and print:
 // "Ada's favorite food is death."
-let favoriteFood = "death"; // TODO: change this
+let favoriteFood = "death";
 console.log(`${firstName}'s favorite food is ${favoriteFood}.`);
 
 // ============================================================
@@ -114,7 +113,7 @@ console.log("\n=== NUMBERS: operators, precedence, %, Math, rounding ===");
 
 // Operators: +  -  *  /  **  %
 // Fill in:
-// % (modulo) gives the __________ after division.
+// % (modulo) gives the remainder after division.
 
 console.log("7 % 3 =", 7 % 3); // remainder is 1
 
@@ -140,8 +139,8 @@ console.log("price.toFixed(2) =", price.toFixed(2), "type:", typeof price.toFixe
 console.log("\n=== CONVERSIONS: Number(), parseInt/parseFloat, NaN ===");
 
 // Fill in:
-// Number("12") converts a string to a __________.
-// NaN means “Not a __________”.
+// Number("12") converts a string to a number.
+// NaN means “Not a number”.
 
 console.log("Number('12') =", Number("12"));
 console.log("parseInt('12.9') =", parseInt("12.9", 10));     // 12
@@ -161,13 +160,13 @@ console.log("parseInt('08', 10) =", parseInt("08", 10));
 // Answer in comments, then (optionally) code it:
 //
 // 1) What is the difference between "5" + 2 and Number("5") + 2?
-//    ______________________________________________________________
+//    "5" + 2 = 52    Number("5") + 2 = 7
 //
 // 2) How do you get the last character of a string s?
-//    ______________________________________________________________
+//    s[s.length - 1]
 //
 // 3) What does % do? Give an example you could use to check “even/odd”.
-//    ______________________________________________________________
+//    remainder.  n % 2 === 0
 
 // TODO (Exit Ticket Coding):
 // Create a variable s = "Robot" and print:

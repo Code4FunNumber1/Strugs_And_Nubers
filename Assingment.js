@@ -61,33 +61,24 @@ Last char: e
 
 console.log("\n=== PART B: Clean + Search ===\n");
 
-// TODO B1: Set messyUsername to a string with extra spaces AND mixed case.
 // Example: "   NiCK Armstrong   "
-let messyUsername = ""; // TODO
+let messyUsername = `  aHHHHHHHHHHHHHHHHah jfohe gf u  ; kdjoeifhbvbn `;
 
 // TODO B2: Create cleanUsername by trimming spaces and lowercasing.
 // Hint: messyUsername.trim().toLowerCase()
-let cleanUsername = ""; // TODO
+let cleanUsername = messyUsername.trim().toLowerCase();
 
-// TODO B3: Replace spaces inside the username with underscores.
-// Hint: .replaceAll(" ", "_")
-cleanUsername = ""; // TODO
+cleanUsername = cleanUsername.replaceAll(" ", "_");
 
-// TODO B4: Print: Clean username: <cleanUsername>
-console.log(""); // TODO
+console.log(cleanUsername);
 
-// TODO B5: Print: Includes 'nick': <true/false>
-// Hint: cleanUsername.includes("nick")
-console.log(""); // TODO
+console.log(cleanUsername.includes("nick"));
 
-// TODO B6: Create a variable domain set to "school.edu"
-let domain = ""; // TODO
+let domain = "school.edu";
 
-// TODO B7: Create email = "<cleanUsername>@<domain>" using a template literal
-let email = ""; // TODO
+let email = `${cleanUsername}@${domain}`;
 
-// TODO B8: Print: Email: <email>
-console.log(""); // TODO
+console.log(email);
 
 /*
 EXPECTED OUTPUT (if messyUsername was "   NiCK Armstrong   "):
@@ -102,26 +93,18 @@ Email: nick_armstrong@school.edu
 
 console.log("\n=== PART C: Numbers ===\n");
 
-// TODO C1: Create price (number) and quantity (number)
-let price = 0;    // TODO
-let quantity = 0; // TODO
+let price = 5000.999;
+let quantity = 1;
 
-// TODO C2: Compute cost = price * quantity
-let cost = 0; // TODO
+let cost = price * quantity;
 
-// TODO C3: Print: Cost raw: <cost>
-console.log(""); // TODO
+console.log(cost);
 
-// TODO C4: Print: Cost rounded: <cost to 2 decimals>
-// Hint: cost.toFixed(2)
-console.log(""); // TODO
+console.log(cost.toFixed(2));
 
-// TODO C5: Compute quantityIsEven (boolean) using modulo (%)
-// Hint: (quantity % 2) === 0
-let quantityIsEven = false; // TODO
+let quantityIsEven = (quantity % 2) === 0;
 
-// TODO C6: Print: Quantity is even: <true/false>
-console.log(""); // TODO
+console.log(quantityIsEven);
 
 // TODO C7: Create rand1to10 = random integer 1..10 inclusive
 // Hint: Math.floor(Math.random() * 10) + 1
