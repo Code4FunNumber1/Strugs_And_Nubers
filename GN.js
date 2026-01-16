@@ -168,7 +168,6 @@ console.log("parseInt('08', 10) =", parseInt("08", 10));
 // 3) What does % do? Give an example you could use to check “even/odd”.
 //    remainder.  n % 2 === 0
 
-// TODO (Exit Ticket Coding):
 // Create a variable s = "Robot" and print:
 // - its length
 // - its last character
